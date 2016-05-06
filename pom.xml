@@ -53,4 +53,13 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
+    <distributionManagement>
+        <repository>
+            <id>bintray-zjor-maven</id>
+            <name>zjor-maven</name>
+            <url>https://api.bintray.com/maven/zjor/maven/telegram-bot-api/;publish=1</url>
+        </repository>
+    </distributionManagement>
+
 </project>
