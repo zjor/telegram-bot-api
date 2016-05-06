@@ -4,9 +4,11 @@ import com.github.zjor.telegram.bot.api.dto.User;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 @Slf4j
+@Ignore("Token should be specified")
 public class TelegramTest {
 
     private Telegram telegram;
