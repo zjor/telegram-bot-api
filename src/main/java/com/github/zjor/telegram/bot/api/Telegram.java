@@ -1,5 +1,6 @@
 package com.github.zjor.telegram.bot.api;
 
+import com.github.zjor.telegram.bot.api.dto.AnswerInlineQueryDTO;
 import com.github.zjor.telegram.bot.api.dto.GetUpdatesRequest;
 import com.github.zjor.telegram.bot.api.dto.Message;
 import com.github.zjor.telegram.bot.api.dto.Response;
@@ -36,6 +37,7 @@ public class Telegram {
     public static final String METHOD_GET_ME = "getMe";
     public static final String METHOD_GET_UPDATES = "getUpdates";
     public static final String METHOD_SEND_MESSAGE = "sendMessage";
+    public static final String METHOD_ANSWER_INLINE_QUERY = "answerInlineQuery";
 
     private String token;
     private HttpClient httpClient;
@@ -49,10 +51,12 @@ public class Telegram {
     public Telegram(String token, HttpClient httpClient) {
         this.token = token;
         this.httpClient = httpClient;
-
-        gson = (new GsonBuilder()).setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES).create();
+        gson = createGson();
     }
 
+    public static Gson createGson() {
+        return (new GsonBuilder()).setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES).create();
+    }
 
     public static Telegram getDefault(String token) {
         return new Telegram(token, HttpClientBuilder.create().build());
@@ -69,6 +73,10 @@ public class Telegram {
 
     public Message sendMessage(SendMessageRequest req) throws TelegramException {
         return post(METHOD_SEND_MESSAGE, req, new ResponseParametrizedType(Message.class));
+    }
+
+    public Boolean answerInlineQuery(AnswerInlineQueryDTO req) throws TelegramException {
+        return post(METHOD_ANSWER_INLINE_QUERY, req, new ResponseParametrizedType(Boolean.class));
     }
 
     private <T> T get(String method, Type responseType) throws TelegramException {
