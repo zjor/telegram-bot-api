@@ -4,8 +4,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Optional;
-
 /**
  * This object represents an incoming update.
  * Only one of the optional parameters can be present in any given update.
@@ -27,14 +25,14 @@ public class Update {
     /**
      * New incoming message of any kind — text, photo, sticker, etc.
      */
-    private Optional<Message> message;
+    private Message message;
 
     /**
      * New incoming inline query
      */
-    private Optional<InlineQuery> inlineQuery;
+    private InlineQuery inlineQuery;
 
-    private Optional<Object> chosenInlineResult;
+    private Object chosenInlineResult;
 
-    private Optional<Object> callbackQuery;
+    private Object callbackQuery;
 }

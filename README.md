@@ -1,14 +1,14 @@
-# Maven dependency #
+## Maven dependency ##
 
 ```
 <dependency>
   <groupId>com.github.zjor.telegram</groupId>
   <artifactId>bot-api</artifactId>
-  <version>1.2</version>
+  <version>1.3</version>
 </dependency>
 ```
 
-# Usage example #
+## Usage example ##
 
 ```
 Telegram telegram = new Telegram("YOUR_TOKEN");
