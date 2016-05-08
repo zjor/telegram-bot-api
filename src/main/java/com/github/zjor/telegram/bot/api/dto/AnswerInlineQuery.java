@@ -5,7 +5,7 @@ import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
-public class AnswerInlineQueryDTO {
+public class AnswerInlineQuery {
 
     /**
      * Unique identifier for the answered query
@@ -15,9 +15,9 @@ public class AnswerInlineQueryDTO {
     /**
      * A JSON-serialized array of results for the inline query
      */
-    private InlineQueryResultDTO[] results;
+    private InlineQueryResult[] results;
 
-    public AnswerInlineQueryDTO(String inlineQueryId, InlineQueryResultDTO... results) {
+    public AnswerInlineQuery(String inlineQueryId, InlineQueryResult... results) {
         this.inlineQueryId = inlineQueryId;
         this.results = results;
     }

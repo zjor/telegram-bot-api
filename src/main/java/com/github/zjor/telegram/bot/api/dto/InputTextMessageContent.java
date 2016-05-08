@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class InputTextMessageContentDTO extends InputMessageContentDTO {
+public class InputTextMessageContent extends InputMessageContent {
 
     /**
      * Text of the message to be sent, 1-4096 characters

@@ -3,7 +3,7 @@ package com.github.zjor.telegram.bot.api.dto;
 import lombok.Data;
 
 @Data
-public class InlineQueryResultArticleDTO extends InlineQueryResultDTO {
+public class InlineQueryResultArticle extends InlineQueryResult {
 
     /**
      * Type of the result, must be article
@@ -23,7 +23,7 @@ public class InlineQueryResultArticleDTO extends InlineQueryResultDTO {
     /**
      * Content of the message to be sent
      */
-    private InputMessageContentDTO inputMessageContent;
+    private InputMessageContent inputMessageContent;
 
     /**
      * Optional. Inline keyboard attached to the message

@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class InlineQueryDTO {
+public class InlineQuery {
 
     /**
      * Unique identifier for this query

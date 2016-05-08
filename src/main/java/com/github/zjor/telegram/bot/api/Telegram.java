@@ -1,6 +1,6 @@
 package com.github.zjor.telegram.bot.api;
 
-import com.github.zjor.telegram.bot.api.dto.AnswerInlineQueryDTO;
+import com.github.zjor.telegram.bot.api.dto.AnswerInlineQuery;
 import com.github.zjor.telegram.bot.api.dto.GetUpdatesRequest;
 import com.github.zjor.telegram.bot.api.dto.Message;
 import com.github.zjor.telegram.bot.api.dto.Response;
@@ -75,7 +75,7 @@ public class Telegram {
         return post(METHOD_SEND_MESSAGE, req, new ResponseParametrizedType(Message.class));
     }
 
-    public Boolean answerInlineQuery(AnswerInlineQueryDTO req) throws TelegramException {
+    public Boolean answerInlineQuery(AnswerInlineQuery req) throws TelegramException {
         return post(METHOD_ANSWER_INLINE_QUERY, req, new ResponseParametrizedType(Boolean.class));
     }
 
