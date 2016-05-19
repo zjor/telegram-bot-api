@@ -5,6 +5,7 @@ import com.github.zjor.telegram.bot.api.dto.GetUpdatesRequest;
 import com.github.zjor.telegram.bot.api.dto.Message;
 import com.github.zjor.telegram.bot.api.dto.Response;
 import com.github.zjor.telegram.bot.api.dto.ResponseParametrizedType;
+import com.github.zjor.telegram.bot.api.dto.SendLocationRequest;
 import com.github.zjor.telegram.bot.api.dto.SendMessageRequest;
 import com.github.zjor.telegram.bot.api.dto.Update;
 import com.github.zjor.telegram.bot.api.dto.User;
@@ -37,6 +38,7 @@ public class Telegram {
     public static final String METHOD_GET_ME = "getMe";
     public static final String METHOD_GET_UPDATES = "getUpdates";
     public static final String METHOD_SEND_MESSAGE = "sendMessage";
+    public static final String METHOD_SEND_LOCATION = "sendLocation";
     public static final String METHOD_ANSWER_INLINE_QUERY = "answerInlineQuery";
 
     private String token;
@@ -67,12 +69,17 @@ public class Telegram {
     }
 
     public List<Update> getUpdates(Integer offset, Integer limit, Integer timeout) throws TelegramException {
-        Type updatesType = new TypeToken<List<Update>>(){}.getType();
+        Type updatesType = new TypeToken<List<Update>>() {
+        }.getType();
         return post(METHOD_GET_UPDATES, new GetUpdatesRequest(offset, limit, timeout), new ResponseParametrizedType(updatesType));
     }
 
     public Message sendMessage(SendMessageRequest req) throws TelegramException {
         return post(METHOD_SEND_MESSAGE, req, new ResponseParametrizedType(Message.class));
+    }
+
+    public Message sendLocation(SendLocationRequest req) throws TelegramException {
+        return post(METHOD_SEND_LOCATION, req, new ResponseParametrizedType(Message.class));
     }
 
     public Boolean answerInlineQuery(AnswerInlineQuery req) throws TelegramException {

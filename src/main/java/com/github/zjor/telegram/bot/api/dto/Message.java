@@ -4,6 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -27,12 +29,16 @@ public class Message {
 
     private Location location;
 
+    /**
+     * Optional. Message is a photo, available sizes of the photo
+     */
+    private List<PhotoSize> photo;
+
     /*
 
 entities	Array of MessageEntity	Optional. For text messages, special entities like usernames, URLs, bot commands, etc. that appear in the text
 audio	Audio	Optional. Message is an audio file, information about the file
 document	Document	Optional. Message is a general file, information about the file
-photo	Array of PhotoSize	Optional. Message is a photo, available sizes of the photo
 sticker	Sticker	Optional. Message is a sticker, information about the sticker
 video	Video	Optional. Message is a video, information about the video
 voice	Voice	Optional. Message is a voice message, information about the file
