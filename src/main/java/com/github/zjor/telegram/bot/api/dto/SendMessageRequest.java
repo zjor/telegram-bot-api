@@ -7,9 +7,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class SendMessageRequest {
 
-    public static final String PARSE_MODE_MD = "Markdown";
-    public static final String PARSE_MODE_HTML = "HTML";
-
     /**
      * String or Integer
      */
