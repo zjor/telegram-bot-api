@@ -17,7 +17,7 @@ public class TelegramTest {
     }
 
     @Test
-    public void shouldGetMe() throws TelegramException {
+    public void shouldGetMe() {
 //        User user = telegram.getMe();
 //        log.info("getMe: {}", user);
 //        Assert.assertNotNull(user.getUsername());

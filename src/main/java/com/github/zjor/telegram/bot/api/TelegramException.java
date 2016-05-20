@@ -1,6 +1,6 @@
 package com.github.zjor.telegram.bot.api;
 
-public class TelegramException extends Exception {
+public class TelegramException extends RuntimeException {
 
     private Integer errorCode;
 
