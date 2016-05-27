@@ -3,7 +3,7 @@
 
     <groupId>com.github.zjor.telegram</groupId>
     <artifactId>bot-api</artifactId>
-    <version>1.8</version>
+    <version>1.9-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>bot-api</name>
@@ -87,7 +87,7 @@
         <connection>scm:git:https://github.com/zjor/telegram-bot-api.git</connection>
         <developerConnection>scm:git:git@github.com:zjor/telegram-bot-api.git</developerConnection>
         <url>https://github.com/zjor/telegram-bot-api</url>
-        <tag>bot-api-1.8</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <distributionManagement>
