@@ -1,5 +1,6 @@
-package com.github.zjor.telegram.bot.api.dto;
+package com.github.zjor.telegram.bot.api.dto.methods;
 
+import com.github.zjor.telegram.bot.api.dto.InlineQueryResult;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
